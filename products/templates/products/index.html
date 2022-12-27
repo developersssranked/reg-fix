@@ -1,0 +1,49 @@
+{% extends 'products/base.html' %} 
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+ {% block content %}
+
+{% if is_promo %}
+
+<h1>негры пидарасы</h1>
+{% endif %}
+
+<h1>our meny</h1>
+
+<br>
+        <div class="tovar">
+            <h3>паста</h3>
+            <p>курица грибы</p>
+            <br>
+            <h3>суп</h3>
+            <p>вода картошка</p>
+     
+<!-- через базу данных -->
+        {% for mens in menu %}
+        <h3>{{mens.name}}</h3>
+        <p>{{ mens.structure }}</p>
+        {% endfor %}
+        </div>
+<br>
+<br>
+
+<h1>информация о нас</h1>
+<br>
+<br>
+        {% for art in article %}
+        <div class="we">
+        <h3>{{ art.name }}</h3>
+        <p> {{art.description}} </p>
+        <img src="{{art.image.url}}" >
+        </div>
+        {% endfor %}
+
+{% endblock %}
+
+  </body>
+</html>

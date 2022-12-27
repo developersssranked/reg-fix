@@ -1,0 +1,22 @@
+{% extends 'products/base.html' %} 
+
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+
+         {% block content %}
+        <h1>menuuuu</h1>
+
+<br>
+<div class="tovar">
+
+
+<!-- через базу данных -->
+{% for eat in product  %}
+<h3>{{eat.name}}</h3>
+<p>{{ eat.description }}</p>
+{% endfor %}
+</div>
+        {% endblock %}

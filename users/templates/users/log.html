@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'prob2.css'%}">
+</head>
+<body>
+  <a href="{% url 'products:home' %}">главная</a>
+    <div class="login-page">
+        <div class="form">
+
+
+          <!-- используем action что бы указать куда направить данные которые вел пользователь и каким методом (пост) -->
+          <form class="login-form"  action=" {% url 'users:log' %}" method="post">
+            {% csrf_token %} <!--защита от пидарасов (не забудь она обязательна)-->
+            <!-- {{ form.as_p }}  используя написанную форму вставляем поля заполнения которые прописанны в самой форме (_p значит что они без стиля) -->
+
+            {{ form.username }}
+            <!-- <input type="text" placeholder="username"/> -->
+
+            {{ form.password }}
+            <!-- <input type="password" placeholder="password"/> -->
+            <button>login</button>
+            <!-- если в будущем не подставятся стили из за label то пересмотри 7 ролик 29.49 минуты -->
+            <p class="message">Not registered? <a href="{% url 'users:reg' %}">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

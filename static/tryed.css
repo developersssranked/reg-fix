@@ -1,0 +1,46 @@
+body {
+    background: hsl(0, 1%, 22%)
+}
+h1 {
+    position: relative;
+    left: 15em;
+    top: 40px;
+    color: rgb(122, 133, 7);
+}
+
+.we {
+    position: relative;
+    left: 15em;
+    
+
+    text-indent: 30px;
+    border: 7px groove #ff4f00;
+    padding: 10px 20px 10px 20px;
+    width: 200px; 
+}
+
+.nabor {
+    position: relative;
+    top: 3em;
+    left:  2em;
+    text-indent: 30px;
+border: 7px groove #ff4f00;
+padding: 10px 20px 10px 20px;
+width: 200px; 
+}
+
+.tovar{
+    position: relative;
+    left: 20em;
+    top: 5em;
+    color: red;
+    border: 7px groove #ff4f00;
+    padding: 10px 20px 10px 20px;
+    width: 200px;
+}
+
+a {
+    color: rgb(255, 115, 0);
+    border-style: groove;
+    font-size: 1em;
+}
