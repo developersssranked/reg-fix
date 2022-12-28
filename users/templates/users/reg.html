@@ -23,14 +23,7 @@
           <form class="login-form"  action=" {% url 'users:reg' %}" method="post">
             {% csrf_token %} 
 
-            {{ form.first_name }}
-            {{ form.last_name }}
-
-            {{ form.username }}
-            {{ form.email }}
-
-            {{ form.password }}
-            {{ form.password2 }} 
+            {{form.as_p}}
 
             <button>login</button>
 
